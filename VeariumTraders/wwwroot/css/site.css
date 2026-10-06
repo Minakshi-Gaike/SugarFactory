@@ -1,0 +1,1264 @@
+/* =========================================================
+   VEARIUM TRADERS
+   MAIN WEBSITE CSS
+   Bootstrap 5 + Custom CSS
+   ========================================================= */
+
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+.top-bar {
+    background: #f36b21;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.top-bar-content {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.top-contact {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+    .top-contact a {
+        color: #ffffff;
+        font-weight: 500;
+    }
+
+    .top-contact span {
+        margin-right: 5px;
+    }
+
+.top-tagline {
+    font-weight: 600;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.vearium-navbar {
+    background: #ffffff;
+    height: 72px;
+    padding: 0;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+    .vearium-navbar .container {
+        height: 100%;
+    }
+
+.vearium-brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.vearium-logo {
+    width: 155px;
+    height: auto;
+    object-fit: contain;
+}
+
+.navbar-nav {
+    gap: 2px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #252525 !important;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 10px !important;
+    line-height: 1.2;
+    transition: 0.3s ease;
+}
+
+    .nav-link:hover {
+        color: #f36b21 !important;
+    }
+
+
+/* =========================================================
+   ENQUIRY BUTTON
+   ========================================================= */
+
+.nav-enquiry {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f36b21;
+    color: #ffffff;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+    .nav-enquiry:hover {
+        background: #d95316;
+        color: #ffffff;
+        transform: translateY(-1px);
+    }
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero-section {
+    min-height: 620px;
+    background-image: url('/images/banners/Golden Harvest.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    min-height: 620px;
+    display: flex;
+    align-items: flex-start;
+    background: linear-gradient( 90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.50) 50%, rgba(0, 0, 0, 0.20) 100% );
+}
+
+.hero-content {
+    max-width: 720px;
+    padding: 65px 0 20px;
+}
+
+.hero-subtitle {
+    color: #f36b21;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero-content h1 {
+    color: #ffffff;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+    .hero-content h1 span {
+        color: #f36b21;
+    }
+
+.hero-description {
+    max-width: 650px;
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 25px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: #f36b21;
+    color: #ffffff;
+}
+
+    .primary-btn:hover {
+        background: #d95316;
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    .primary-btn span {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+    .secondary-btn:hover {
+        background: #ffffff;
+        color: #222222;
+        transform: translateY(-2px);
+    }
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.vearium-footer {
+    background: #202020;
+    color: #dddddd;
+    padding: 65px 0 0;
+}
+
+.footer-logo {
+    width: 190px;
+    background: #ffffff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+}
+
+.footer-tagline {
+    color: #f36b21;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.vearium-footer h5 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.vearium-footer p {
+    line-height: 1.7;
+}
+/* =========================================================
+   FOOTER LINKS
+   ========================================================= */
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: #cccccc;
+        transition: 0.3s ease;
+    }
+
+        .footer-links a:hover {
+            color: #f36b21;
+            padding-left: 4px;
+        }
+/* =========================================================
+   FOOTER CONTACT
+   ========================================================= */
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .footer-contact li {
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+
+    .footer-contact a {
+        color: #dddddd;
+    }
+
+        .footer-contact a:hover {
+            color: #f36b21;
+        }
+
+.footer-gstin {
+    margin-top: 15px;
+    color: #ffffff;
+}
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+    margin-top: 45px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+    .footer-bottom p {
+        margin: 0;
+        font-size: 14px;
+    }
+/* =========================================================
+   WHATSAPP FLOATING BUTTON
+   ========================================================= */
+
+.whatsapp-button {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.20);
+    z-index: 9999;
+    transition: 0.3s ease;
+}
+
+    .whatsapp-button:hover {
+        color: #ffffff;
+        transform: scale(1.08);
+    }
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .top-bar-content {
+        padding: 8px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .top-contact {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    /* Compact mobile/tablet navbar */
+
+    .vearium-navbar {
+        height: auto;
+        min-height: 62px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .vearium-logo {
+        width: 145px;
+    }
+
+    .navbar-nav {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        padding: 8px 0 !important;
+    }
+
+    .nav-enquiry {
+        margin-top: 5px;
+        display: inline-flex;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+    /* HERO */
+
+    .hero-section,
+    .hero-overlay {
+        min-height: 560px;
+    }
+
+    .hero-content {
+        padding: 55px 0 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 260px;
+    }
+}
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+    /* TOP BAR */
+
+    .top-bar {
+        font-size: 12px;
+    }
+
+    .top-contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .top-tagline {
+        display: none;
+    }
+    /* LOGO */
+
+    .vearium-logo {
+        width: 145px;
+    }
+    /* HERO */
+
+    .hero-section {
+        min-height: 540px;
+        background-position: center;
+    }
+
+    .hero-overlay {
+        min-height: 540px;
+    }
+
+    .hero-content {
+        padding: 50px 0 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+        letter-spacing: 1px;
+        margin-bottom: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+        line-height: 1.1;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 100%;
+    }
+    /* WHATSAPP */
+
+    .whatsapp-button {
+        width: 52px;
+        height: 52px;
+        right: 18px;
+        bottom: 18px;
+        font-size: 24px;
+    }
+    /* FOOTER */
+
+    .vearium-footer {
+        padding-top: 45px;
+    }
+
+    .footer-logo {
+        width: 165px;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        padding: 18px 0;
+    }
+
+        .footer-bottom p {
+            font-size: 13px;
+        }
+}
+/* =========================================================
+   HERO STATISTICS CARDS
+   ========================================================= */
+
+.hero-statistics {
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.hero-stat-card {
+    min-height: 115px;
+    padding: 22px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Transparent glass card */
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    transition: all 0.3s ease;
+}
+
+    .hero-stat-card h2 {
+        margin: 0 0 6px;
+        font-size: 34px;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-stat-card p {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 500;
+        color: #ffffff;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-stat-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(255, 255, 255, 0.50);
+    }
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .hero-statistics {
+        margin-top: 18px;
+        padding-bottom: 20px;
+    }
+
+    .hero-stat-card {
+        min-height: 100px;
+        padding: 18px 10px;
+        border-radius: 10px;
+    }
+
+        .hero-stat-card h2 {
+            font-size: 27px;
+        }
+
+        .hero-stat-card p {
+            font-size: 13px;
+        }
+}
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .hero-statistics {
+        margin-top: 15px;
+    }
+
+    .hero-stat-card {
+        min-height: 95px;
+        padding: 15px 8px;
+    }
+
+        .hero-stat-card h2 {
+            font-size: 24px;
+        }
+
+        .hero-stat-card p {
+            font-size: 12px;
+            line-height: 1.3;
+        }
+}
+/* =========================================================
+   ABOUT VEARIUM SECTION
+   ========================================================= */
+
+.about-section {
+    padding: 90px 0;
+    background: #ffffff;
+}
+
+
+/* ABOUT CONTENT */
+
+.about-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #f36b21;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.about-title {
+    margin-bottom: 22px;
+    color: #222222;
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+    .about-title span {
+        color: #f36b21;
+    }
+
+.about-text {
+    margin-bottom: 16px;
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* HIGHLIGHTS */
+
+.about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 25px 0 30px;
+}
+
+.about-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.about-check {
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f36b21;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* BUTTON */
+
+.about-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    padding: 0 24px;
+    border-radius: 6px;
+    background: #f36b21;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    .about-btn:hover {
+        background: #d95316;
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    .about-btn span {
+        font-size: 20px;
+    }
+
+
+/* ABOUT IMAGE */
+
+.about-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-image {
+    width: 100%;
+    height: 470px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-image-wrapper:hover .about-image {
+    transform: scale(1.04);
+}
+
+
+/* IMAGE BADGE */
+
+.about-image-badge {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.94);
+    border-left: 4px solid #f36b21;
+    border-radius: 6px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+    .about-image-badge strong {
+        color: #222222;
+        font-size: 16px;
+    }
+
+    .about-image-badge span {
+        color: #666666;
+        font-size: 13px;
+    }
+
+
+/* QUOTE */
+
+.about-quote {
+    margin-top: 55px;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #f3fbf5;
+    border-radius: 8px;
+}
+
+.quote-line {
+    width: 4px;
+    min-width: 4px;
+    height: 42px;
+    background: #20a653;
+    border-radius: 5px;
+}
+
+.about-quote p {
+    margin: 0;
+    color: #28643b;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ABOUT - MOBILE
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .about-section {
+        padding: 70px 0;
+    }
+
+    .about-image {
+        height: 400px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .about-section {
+        padding: 55px 0;
+    }
+
+    .about-label {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .about-image {
+        height: 320px;
+    }
+
+    .about-image-badge {
+        left: 15px;
+        bottom: 15px;
+        padding: 12px 15px;
+    }
+
+        .about-image-badge strong {
+            font-size: 14px;
+        }
+
+        .about-image-badge span {
+            font-size: 12px;
+        }
+
+    .about-quote {
+        margin-top: 35px;
+        padding: 16px;
+    }
+
+        .about-quote p {
+            font-size: 15px;
+        }
+}
+
+/* =========================================================
+   OUR PRODUCTS SECTION
+   ========================================================= */
+
+.products-section {
+    padding: 90px 0;
+    background: #f8f9f7;
+}
+
+
+/* SECTION HEADING */
+
+.products-heading {
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.products-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #f36b21;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.products-heading h2 {
+    margin-bottom: 15px;
+    color: #222222;
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+    .products-heading h2 span {
+        color: #f36b21;
+    }
+
+.products-heading p {
+    margin: 0;
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* PRODUCT CARD */
+
+.product-card {
+    height: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+    .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+
+/* PRODUCT IMAGE */
+
+.product-image-wrapper {
+    height: 250px;
+    overflow: hidden;
+    background: #f2f2f2;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.06);
+}
+
+
+/* PRODUCT CONTENT */
+
+.product-content {
+    padding: 25px;
+}
+
+    .product-content h3 {
+        margin-bottom: 10px;
+        color: #222222;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .product-content p {
+        min-height: 52px;
+        margin-bottom: 18px;
+        color: #666666;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+/* PRODUCT LINK */
+
+.product-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #f36b21;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    .product-link:hover {
+        color: #d95316;
+        gap: 12px;
+    }
+
+    .product-link span {
+        font-size: 18px;
+    }
+
+
+/* BOTTOM BUTTON */
+
+.products-bottom {
+    margin-top: 45px;
+}
+
+.products-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    padding: 0 25px;
+    background: #f36b21;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    .products-btn:hover {
+        background: #d95316;
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    .products-btn span {
+        font-size: 20px;
+    }
+
+
+/* =========================================================
+   PRODUCTS - TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .products-section {
+        padding: 70px 0;
+    }
+
+    .product-image-wrapper {
+        height: 230px;
+    }
+}
+
+
+/* =========================================================
+   PRODUCTS - MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .products-section {
+        padding: 55px 0;
+    }
+
+    .products-heading {
+        margin-bottom: 35px;
+    }
+
+    .products-label {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .products-heading h2 {
+        font-size: 32px;
+    }
+
+    .products-heading p {
+        font-size: 15px;
+    }
+
+    .product-image-wrapper {
+        height: 220px;
+    }
+
+    .product-content {
+        padding: 20px;
+    }
+
+        .product-content h3 {
+            font-size: 20px;
+        }
+}
+/* =========================================================
+   FEATURED COMMODITIES
+   ========================================================= */
+
+.featured-commodities-section {
+    padding: 45px 0 35px;
+    background: #ffffff;
+}
+
+.featured-heading {
+    margin-bottom: 25px;
+}
+
+    .featured-heading h2 {
+        margin: 0;
+        color: #8a4b18;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+
+/* PRODUCT ROW */
+
+.featured-products-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* PRODUCT CARD */
+
+.featured-product-card {
+    position: relative;
+    width: 150px;
+    height: 82px;
+    overflow: hidden;
+    border-radius: 6px;
+    text-decoration: none;
+    background: #eeeeee;
+    transition: all 0.3s ease;
+}
+
+    .featured-product-card img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+
+    /* DARK OVERLAY */
+
+    .featured-product-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.18);
+    }
+
+
+/* PRODUCT NAME */
+
+.featured-product-name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* HOVER */
+
+.featured-product-card:hover {
+    transform: translateY(-3px);
+}
+
+    .featured-product-card:hover img {
+        transform: scale(1.08);
+    }
+
+
+/* =========================================================
+   TRUSTED SECTION
+   ========================================================= */
+
+.trusted-section {
+    padding: 42px 20px;
+    background: #fafaf0;
+}
+
+    .trusted-section h2 {
+        margin-bottom: 8px;
+        color: #8a4b18;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .trusted-section p {
+        margin: 0;
+        color: #777777;
+        font-size: 14px;
+    }
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .featured-commodities-section {
+        padding: 35px 0 25px;
+    }
+
+    .featured-heading h2 {
+        font-size: 21px;
+    }
+
+    .featured-products-row {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 5px 5px 12px;
+        gap: 10px;
+        scrollbar-width: none;
+    }
+
+        .featured-products-row::-webkit-scrollbar {
+            display: none;
+        }
+
+    .featured-product-card {
+        flex: 0 0 145px;
+        width: 145px;
+        height: 80px;
+    }
+
+    .featured-product-name {
+        font-size: 12px;
+    }
+
+    .trusted-section {
+        padding: 35px 15px;
+    }
+
+        .trusted-section h2 {
+            font-size: 21px;
+        }
+}

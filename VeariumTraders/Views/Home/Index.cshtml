@@ -1,0 +1,329 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero-section">
+
+    <div class="hero-overlay">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <p class="hero-subtitle">
+                    AGRICULTURAL COMMODITY TRADING
+                </p>
+
+                <h1>
+                    Quality You Can
+                    <span>Trust</span>
+                </h1>
+
+                <p class="hero-description">
+                    Reliable bulk trading and supply of
+                    Maize, Sugar, Jaggery, Jaggery Powder
+                    and Coconut Shell.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a asp-controller="Products"
+                       asp-action="Index"
+                       class="hero-btn primary-btn">
+                        Our Products
+                        <span>→</span>
+                    </a>
+
+                    <a asp-controller="Enquiry"
+                       asp-action="Index"
+                       class="hero-btn secondary-btn">
+                        Get Bulk Enquiry
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= STATISTICS CARDS ================= -->
+
+            <div class="hero-statistics">
+
+                <div class="row g-3">
+
+                    <!-- Statistic 1 -->
+                    <div class="col-6 col-md-3">
+                        <div class="hero-stat-card">
+                            <h2>50,000+</h2>
+                            <p>Tons Traded</p>
+                        </div>
+                    </div>
+
+                    <!-- Statistic 2 -->
+                    <div class="col-6 col-md-3">
+                        <div class="hero-stat-card">
+                            <h2>10+</h2>
+                            <p>Countries Served</p>
+                        </div>
+                    </div>
+
+                    <!-- Statistic 3 -->
+                    <div class="col-6 col-md-3">
+                        <div class="hero-stat-card">
+                            <h2>15+</h2>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+
+                    <!-- Statistic 4 -->
+                    <div class="col-6 col-md-3">
+                        <div class="hero-stat-card">
+                            <h2>10+</h2>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= ABOUT VEARIUM SECTION ================= -->
+
+<section class="about-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- LEFT: CONTENT -->
+            <div class="col-lg-6">
+
+                <div class="about-content">
+
+                    <span class="about-label">
+                        ABOUT VEARIUM TRADERS
+                    </span>
+
+                    <h2 class="about-title">
+                        Your Trusted Partner in
+                        <span>Agricultural Commodity Trading</span>
+                    </h2>
+
+                    <p class="about-text">
+                        Vearium Traders is engaged in agricultural
+                        commodity trading and bulk supply of quality
+                        products such as Maize, Sugar, Jaggery,
+                        Jaggery Powder and Coconut Shell.
+                    </p>
+
+                    <p class="about-text">
+                        We focus on quality-verified goods, competitive
+                        pricing and reliable supply to support buyers
+                        and business partners with dependable
+                        agricultural commodity sourcing.
+                    </p>
+
+                    <div class="about-highlights">
+
+                        <div class="about-highlight-item">
+                            <span class="about-check">✓</span>
+                            <span>Quality Verified Goods</span>
+                        </div>
+
+                        <div class="about-highlight-item">
+                            <span class="about-check">✓</span>
+                            <span>Competitive Pricing</span>
+                        </div>
+
+                        <div class="about-highlight-item">
+                            <span class="about-check">✓</span>
+                            <span>Reliable Supply</span>
+                        </div>
+
+                    </div>
+
+                    <a asp-controller="Products"
+                       asp-action="Index"
+                       class="about-btn">
+                        Explore Our Products
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT: IMAGE -->
+            <div class="col-lg-6">
+
+                <div class="about-image-wrapper">
+
+                    <img src="~/images/Products/maize.jpg"
+                         alt="Agricultural Commodity Trading"
+                         class="about-image" />
+
+                    <div class="about-image-badge">
+                        <strong>Quality You Can Trust</strong>
+                        <span>Reliable Trading Partner</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HIGHLIGHT QUOTE -->
+
+        <div class="about-quote">
+
+            <span class="quote-line"></span>
+
+            <p>
+                "Quality products. Reliable supply. Trusted trading."
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= OUR PRODUCTS SECTION ================= -->
+<!-- ================= FEATURED COMMODITIES ================= -->
+
+<section class="featured-commodities-section">
+
+    <div class="container">
+
+        <div class="featured-heading text-center">
+            <h2>Featured Commodities</h2>
+        </div>
+
+        <div class="featured-products-row">
+
+            <!-- Maize -->
+            <a asp-controller="Products"
+               asp-action="Index"
+               class="featured-product-card">
+
+                <img src="~/images/products/maize.jpg"
+                     alt="Maize">
+
+                <div class="featured-product-name">
+                    Maize
+                </div>
+
+            </a>
+
+
+            <!-- Sugar -->
+            <a asp-controller="Products"
+               asp-action="Index"
+               class="featured-product-card">
+
+                <img src="~/images/products/sugar.jpg"
+                     alt="Sugar">
+
+                <div class="featured-product-name">
+                    Sugar
+                </div>
+
+            </a>
+
+
+            <!-- Jaggery -->
+            <a asp-controller="Products"
+               asp-action="Index"
+               class="featured-product-card">
+
+                <img src="~/images/products/jaggery.jpg"
+                     alt="Jaggery">
+
+                <div class="featured-product-name">
+                    Jaggery
+                </div>
+
+            </a>
+
+
+            <!-- Jaggery Powder -->
+            <a asp-controller="Products"
+               asp-action="Index"
+               class="featured-product-card">
+
+                <img src="~/images/products/jaggery-powder.jpg"
+                     alt="Jaggery Powder">
+
+                <div class="featured-product-name">
+                    Jaggery Powder
+                </div>
+
+            </a>
+
+
+            <!-- Coconut Shell -->
+            <a asp-controller="Products"
+               asp-action="Index"
+               class="featured-product-card">
+
+                <img src="~/images/products/coconut-shell.jpg"
+                     alt="Coconut Shell">
+
+                <div class="featured-product-name">
+                    Coconut Shell
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TRUSTED PARTNER SECTION ================= -->
+
+<section class="trusted-section">
+
+    <div class="container text-center">
+
+        <h2>
+            Trusted Trading Partner
+        </h2>
+
+        <p>
+            Quality products and reliable supply for agricultural
+            commodity requirements.
+        </p>
+
+    </div>
+
+</section>
+
+        <!-- Bottom Button -->
+
+        <div class="products-bottom text-center">
+
+            <a asp-controller="Products"
+               asp-action="Index"
+               class="products-btn">
+                View All Products
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>

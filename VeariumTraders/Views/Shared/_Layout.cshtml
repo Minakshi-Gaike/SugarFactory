@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - Vearium Traders</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Vearium Main CSS -->
+    <link rel="stylesheet"
+          href="~/css/site.css"
+          asp-append-version="true" />
+
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+
+<body>
+
+    <!-- ================= TOP BAR ================= -->
+
+    @* <div class="top-bar">
+
+        <div class="container">
+
+            <div class="top-bar-content">
+
+                <div class="top-contact">
+
+                    <a href="tel:9028215279">
+                        <span>📞</span>
+                        9028215279
+                    </a>
+
+                    <a href="mailto:veariumtraders@gmail.com">
+                        <span>✉</span>
+                        veariumtraders@gmail.com
+                    </a>
+
+                </div>
+
+                <div class="top-tagline">
+                    Quality You Can Trust
+                </div>
+
+            </div>
+
+        </div>
+
+    </div> *@
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg vearium-navbar">
+
+            <div class="container">
+
+                <!-- LOGO -->
+
+                <a class="navbar-brand vearium-brand"
+                   asp-controller="Home"
+                   asp-action="Index">
+
+                    <img src="~/images/logo/vearium_logo.png.jpeg"
+                         alt="Vearium Traders Logo"
+                         class="vearium-logo" />
+
+                </a>
+
+
+                <!-- MOBILE MENU BUTTON -->
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#veariumNavbar"
+                        aria-controls="veariumNavbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <!-- NAVIGATION -->
+
+                <div class="collapse navbar-collapse"
+                     id="veariumNavbar">
+
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Home"
+                               asp-action="Index">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="About"
+                               asp-action="Index">
+
+                                About Us
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Products"
+                               asp-action="Index">
+
+                                Products
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Services"
+                               asp-action="Index">
+
+                                Services
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Agriculture"
+                               asp-action="Index">
+
+                                Agriculture & Trading
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Gallery"
+                               asp-action="Index">
+
+                                Gallery
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="News"
+                               asp-action="Index">
+
+                                News
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-controller="Contact"
+                               asp-action="Index">
+
+                                Contact
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- ENQUIRY BUTTON -->
+
+                        <li class="nav-item ms-lg-3">
+
+                            <a class="nav-enquiry"
+                               asp-controller="Enquiry"
+                               asp-action="Index">
+
+                                Get Enquiry
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main>
+
+        @RenderBody()
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="vearium-footer">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <!-- COMPANY -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <img src="~/images/logo/vearium_logo.png.jpeg"
+                         alt="Vearium Traders"
+                         class="footer-logo" />
+
+                    <p class="footer-tagline">
+                        Quality You Can Trust
+                    </p>
+
+                    <p>
+                        Vearium Traders is engaged in agricultural
+                        commodity trading and bulk supply of quality
+                        products.
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <h5>Quick Links</h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a asp-controller="Home"
+                               asp-action="Index">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a asp-controller="About"
+                               asp-action="Index">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a asp-controller="Products"
+                               asp-action="Index">
+                                Products
+                            </a>
+                        </li>
+
+                        <li>
+                            <a asp-controller="Services"
+                               asp-action="Index">
+                                Services
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- PRODUCTS -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <h5>Products</h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#">
+                                Maize
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Sugar
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Jaggery
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Jaggery Powder
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Coconut Shell
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <h5>Contact Us</h5>
+
+                    <ul class="footer-contact">
+
+                        <li>
+                            📞
+                            <a href="tel:9028215279">
+                                9028215279
+                            </a>
+                        </li>
+
+                        <li>
+                            ✉
+                            <a href="mailto:veariumtraders@gmail.com">
+                                veariumtraders@gmail.com
+                            </a>
+                        </li>
+
+                        <li>
+                            📍
+                            Building No./Flat No.: 40/A/2,
+                            Yarad Galli, Shivaji Chouk,
+                            Near Shivagiri Branch Post Office,
+                            Nipani, Karnataka
+                        </li>
+
+                    </ul>
+
+                    <p class="footer-gstin">
+                        <strong>GSTIN:</strong>
+                        29DSPP336A1ZA
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- COPYRIGHT -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © @DateTime.Now.Year Vearium Traders.
+                    All Rights Reserved.
+                </p>
+
+                <p>
+                    Quality You Can Trust
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= WHATSAPP ================= -->
+
+    <a href="https://wa.me/919028215279"
+       class="whatsapp-button"
+       target="_blank"
+       aria-label="Chat with Vearium Traders on WhatsApp">
+
+        <span>💬</span>
+
+    </a>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/site.js"
+            asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>
