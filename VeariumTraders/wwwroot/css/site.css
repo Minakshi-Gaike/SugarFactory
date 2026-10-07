@@ -1262,3 +1262,753 @@ img {
             font-size: 21px;
         }
 }
+
+/* =========================================================
+   OUR SERVICES SECTION
+   ========================================================= */
+
+.services-section {
+    padding: 75px 0;
+    background: #f7f8f6;
+}
+
+.services-heading {
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+    .services-heading span {
+        display: inline-block;
+        margin-bottom: 8px;
+        color: #f36b21;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .services-heading h2 {
+        margin: 0 0 12px;
+        color: #8a4b18;
+        font-size: 40px;
+        font-weight: 800;
+    }
+
+    .services-heading p {
+        margin: 0;
+        color: #666666;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+/* SERVICE CARD */
+
+.service-card {
+    height: 100%;
+    min-height: 205px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+    .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+
+
+/* ICON */
+
+.service-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+
+/* TITLE */
+
+.service-card h3 {
+    margin: 0 0 10px;
+    color: #188447;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+/* DESCRIPTION */
+
+.service-card p {
+    max-width: 220px;
+    margin: 0;
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SERVICES - MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .services-section {
+        padding: 55px 0;
+    }
+
+    .services-heading {
+        margin-bottom: 30px;
+    }
+
+        .services-heading h2 {
+            font-size: 32px;
+        }
+
+    .service-card {
+        min-height: 185px;
+        padding: 25px 18px;
+    }
+}
+
+
+/* =========================================================
+   HOMEPAGE - COMPACT SECTION SPACING OVERRIDES
+   ========================================================= */
+
+.about-section {
+    padding-top: 55px;
+    padding-bottom: 40px;
+}
+
+.about-quote {
+    margin-top: 28px;
+}
+
+.featured-commodities-section {
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+
+.featured-heading {
+    margin-bottom: 18px;
+}
+
+.services-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.services-heading {
+    margin-bottom: 28px;
+}
+
+.trusted-section {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.vearium-footer {
+    padding-top: 45px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+}
+
+@media (max-width: 991px) {
+
+    .about-section {
+        padding-top: 45px;
+        padding-bottom: 35px;
+    }
+
+    .about-quote {
+        margin-top: 24px;
+    }
+
+    .services-section {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+
+    .services-heading {
+        margin-bottom: 24px;
+    }
+
+    .featured-commodities-section {
+        padding-top: 28px;
+        padding-bottom: 22px;
+    }
+
+    .trusted-section {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .vearium-footer {
+        padding-top: 40px;
+    }
+
+    .footer-bottom {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .about-section {
+        padding-top: 38px;
+        padding-bottom: 30px;
+    }
+
+    .about-quote {
+        margin-top: 20px;
+    }
+
+    .services-section {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .services-heading {
+        margin-bottom: 22px;
+    }
+
+    .featured-commodities-section {
+        padding-top: 24px;
+        padding-bottom: 18px;
+    }
+
+    .featured-heading {
+        margin-bottom: 15px;
+    }
+
+    .trusted-section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .vearium-footer {
+        padding-top: 35px;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+    }
+}
+/* =========================================================
+   FINAL COMPACT HOMEPAGE SPACING
+   ========================================================= */
+
+/* Reduce the large white space after Hero/Statistics
+   before the About section */
+.about-section {
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+
+/* Keep the quote close to the About content */
+.about-quote {
+    margin-top: 28px;
+    margin-bottom: 0;
+}
+
+/* Bring Our Services close to the About quote */
+.services-section {
+    padding-top: 15px;
+    padding-bottom: 45px;
+}
+
+/* Keep Featured Commodities compact */
+.featured-commodities-section {
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+/* Keep Trusted section compact */
+.trusted-section {
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+
+    .about-section {
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+
+    .services-section {
+        padding-top: 18px;
+        padding-bottom: 40px;
+    }
+
+    .featured-commodities-section {
+        padding-top: 22px;
+        padding-bottom: 18px;
+    }
+
+    .trusted-section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    .about-section {
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    .about-quote {
+        margin-top: 20px;
+    }
+
+    .services-section {
+        padding-top: 15px;
+        padding-bottom: 35px;
+    }
+
+    .featured-commodities-section {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+
+    .trusted-section {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+}
+
+
+/* =========================================================
+   FINAL - REDUCE SPACE ABOVE VIEW ALL PRODUCTS BUTTON
+   ========================================================= */
+
+.products-bottom {
+    margin-top: 12px;
+}
+
+/* Keep it compact on tablet */
+@media (max-width: 991px) {
+    .products-bottom {
+        margin-top: 10px;
+    }
+}
+
+/* Keep it compact on mobile */
+@media (max-width: 576px) {
+    .products-bottom {
+        margin-top: 10px;
+    }
+}
+
+
+/* =========================================================
+   FINAL - SPACE BETWEEN VIEW ALL PRODUCTS AND FOOTER
+   ========================================================= */
+
+.products-bottom {
+    margin-top: 12px;
+    margin-bottom: 55px;
+}
+
+@media (max-width: 991px) {
+    .products-bottom {
+        margin-top: 10px;
+        margin-bottom: 45px;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-bottom {
+        margin-top: 10px;
+        margin-bottom: 35px;
+    }
+}
+
+
+/* =========================================================
+   FINAL - REMOVE SPACE ABOVE "WHAT WE OFFER"
+   ========================================================= */
+
+.services-section {
+    padding-top: 0;
+}
+
+@media (max-width: 991px) {
+    .services-section {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-section {
+        padding-top: 0;
+    }
+}
+/* =========================================================
+   PRODUCTS PAGE
+   ========================================================= */
+
+/* ================= PRODUCT HERO ================= */
+
+.products-page-hero {
+    min-height: 330px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55) ), url('/images/banners/Golden Harvest.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.products-page-overlay {
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+}
+
+.products-page-hero-content {
+    max-width: 700px;
+    padding: 45px 0;
+    color: #ffffff;
+}
+
+    .products-page-hero-content span {
+        display: inline-block;
+        margin-bottom: 12px;
+        color: #ff6b21;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .products-page-hero-content h1 {
+        margin: 0 0 15px;
+        font-size: clamp(42px, 5vw, 64px);
+        line-height: 1.05;
+        font-weight: 800;
+    }
+
+        .products-page-hero-content h1 strong {
+            color: #ff6b21;
+        }
+
+    .products-page-hero-content p {
+        max-width: 620px;
+        margin: 0;
+        color: #ffffff;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+
+/* ================= INTRO ================= */
+
+.products-intro-section {
+    padding: 55px 0 30px;
+    background: #ffffff;
+}
+
+.products-intro {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.products-page-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #f36b21;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.products-intro h2 {
+    margin-bottom: 15px;
+    color: #222222;
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+    .products-intro h2 strong {
+        color: #f36b21;
+    }
+
+.products-intro p {
+    margin: 0;
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ================= PRODUCT LIST ================= */
+
+.products-list-section {
+    padding: 30px 0 70px;
+    background: #f7f8f6;
+}
+
+
+/* ================= PRODUCT CARD ================= */
+
+.products-page-card {
+    height: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .products-page-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+
+/* ================= PRODUCT IMAGE ================= */
+
+.products-page-image {
+    height: 260px;
+    overflow: hidden;
+    background: #eeeeee;
+}
+
+    .products-page-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+.products-page-card:hover
+.products-page-image img {
+    transform: scale(1.06);
+}
+
+
+/* ================= CARD CONTENT ================= */
+
+.products-page-card-content {
+    position: relative;
+    padding: 25px;
+}
+
+.product-number {
+    display: block;
+    margin-bottom: 5px;
+    color: #f36b21;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.products-page-card-content h3 {
+    margin: 0 0 10px;
+    color: #222222;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.products-page-card-content p {
+    min-height: 50px;
+    margin-bottom: 20px;
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ================= ENQUIRY BUTTON ================= */
+
+.product-enquiry-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #f36b21;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    .product-enquiry-btn:hover {
+        background: #d95316;
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    .product-enquiry-btn span {
+        font-size: 18px;
+    }
+
+
+/* ================= CTA ================= */
+
+.products-cta-section {
+    padding: 65px 0;
+    background: #fffaf2;
+}
+
+.products-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .products-cta-content > span {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: #f36b21;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .products-cta-content h2 {
+        margin-bottom: 12px;
+        color: #8a4b18;
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: 800;
+    }
+
+    .products-cta-content p {
+        margin-bottom: 25px;
+        color: #666666;
+        font-size: 16px;
+    }
+
+.products-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    padding: 0 25px;
+    background: #f36b21;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    .products-cta-btn:hover {
+        background: #d95316;
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    .products-cta-btn span {
+        font-size: 20px;
+    }
+
+
+/* =========================================================
+   PRODUCTS PAGE - TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .products-page-hero,
+    .products-page-overlay {
+        min-height: 290px;
+    }
+
+    .products-page-hero-content {
+        padding: 40px 0;
+    }
+
+    .products-page-image {
+        height: 230px;
+    }
+
+    .products-list-section {
+        padding-bottom: 55px;
+    }
+}
+
+
+/* =========================================================
+   PRODUCTS PAGE - MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .products-page-hero,
+    .products-page-overlay {
+        min-height: 250px;
+    }
+
+    .products-page-hero-content {
+        padding: 30px 0;
+    }
+
+        .products-page-hero-content span {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+        }
+
+        .products-page-hero-content h1 {
+            font-size: 40px;
+        }
+
+        .products-page-hero-content p {
+            font-size: 14px;
+        }
+
+    .products-intro-section {
+        padding: 40px 0 25px;
+    }
+
+    .products-intro h2 {
+        font-size: 30px;
+    }
+
+    .products-intro p {
+        font-size: 14px;
+    }
+
+    .products-list-section {
+        padding: 25px 0 45px;
+    }
+
+    .products-page-image {
+        height: 220px;
+    }
+
+    .products-page-card-content {
+        padding: 20px;
+    }
+
+        .products-page-card-content h3 {
+            font-size: 21px;
+        }
+
+    .products-cta-section {
+        padding: 45px 15px;
+    }
+}
