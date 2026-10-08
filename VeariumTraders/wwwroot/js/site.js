@@ -1,4 +1,28 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿/* =========================================
+   VEARIUM WEBSITE INTRO
+   ========================================= */
 
-// Write your JavaScript code.
+window.addEventListener("load", function () {
+
+    const intro = document.getElementById("veariumIntro");
+
+    if (!intro) {
+        return;
+    }
+
+    /*
+       Intro duration:
+       Bags animation
+       +
+       Company name
+       +
+       Exit
+    */
+
+    setTimeout(function () {
+
+        intro.classList.add("intro-hide");
+
+    }, 6200);
+
+});
