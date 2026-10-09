@@ -2,6 +2,33 @@
     ViewData["Title"] = "Home";
 }
 
+<!-- VEARIUM INTRO -->
+<div id="veariumIntro" class="vearium-intro">
+
+    <div class="vearium-intro-bags">
+        <img src="~/images/products/maize.jpg"
+             class="intro-bag bag-1" alt="Maize" />
+
+        <img src="~/images/products/sugar.jpg"
+             class="intro-bag bag-2" alt="Sugar" />
+
+        <img src="~/images/products/jaggery.jpg"
+             class="intro-bag bag-3" alt="Jaggery" />
+
+        <img src="~/images/products/jaggery-powder.jpg"
+             class="intro-bag bag-4" alt="Jaggery Powder" />
+    </div>
+
+    <div class="vearium-intro-brand">
+        <img src="~/images/logo/vearium_logo.png.jpeg"
+             class="intro-logo" alt="Vearium Traders Logo" />
+
+        <h1>VEARIUM</h1>
+        <p>AGRICULTURAL COMMODITY TRADING &amp; BULK SUPPLY</p>
+    </div>
+
+</div>
+
 <!-- ================= HERO SECTION ================= -->
 
 <section class="hero-section">
@@ -36,7 +63,7 @@
                         <span>→</span>
                     </a>
 
-                    <a asp-controller="Enquiry"
+                    <a asp-controller="BulkEnquiry"
                        asp-action="Index"
                        class="hero-btn secondary-btn">
                         Get Bulk Enquiry
@@ -238,46 +265,7 @@
             </div>
 
 
-            @* <!-- Bulk Supply -->
-            <div class="col-12 col-sm-6 col-lg-3">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div class="service-card">
-
-                    <div class="service-icon">
-                        📦
-                    </div>
-
-                    <h3>Bulk Supply</h3>
-
-                    <p>
-                        Reliable bulk supply of quality
-                        agricultural commodities.
-                    </p>
-
-                </div>
-
-            </div> *@
-
-
-            <!-- Sourcing -->
+                       <!-- Sourcing -->
             <div class="col-12 col-sm-6 col-lg-3">
 
             <div class="service-card">
@@ -432,13 +420,6 @@ class="featured-product-card">
             Quality products and reliable supply for agricultural
 commodity requirements.
         </p>
-
-
-
-
-
-
-
 
     </div>
 

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<VeariumTraders.Models.BulkEnquiry>
+
+@{
+    ViewData["Title"] = "Admin - Bulk Enquiries";
+}
+
+<div class="container py-4">
+    <h2 class="mb-4">Bulk Enquiries Dashboard</h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>Enquiry ID</th>
+                    <th>Customer Name</th>
+                    <th>Company</th>
+                    <th>Mobile</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Delivery Location</th>
+                    <th>Enquiry Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    @foreach (var enquiry in Model)
+                    {
+                        <tr>
+                            <td>@enquiry.EnquiryId</td>
+                            <td>@enquiry.FullName</td>
+                            <td>@enquiry.CompanyName</td>
+                            <td>@enquiry.MobileNumber</td>
+                            <td>@enquiry.ProductName</td>
+                            <td>@enquiry.RequiredQuantity @enquiry.QuantityUnit</td>
+                            <td>@enquiry.DeliveryLocation</td>
+                            <td>@enquiry.EnquiryDate.ToString("dd-MM-yyyy")</td>
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    @enquiry.Status
+                                </span>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="9" class="text-center py-4">
+                            No bulk enquiries found.
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
