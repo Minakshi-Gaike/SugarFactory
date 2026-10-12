@@ -3418,54 +3418,54 @@ main {
     padding: 35px 0 45px;
 }
 
-    .contact-page .contact-heading {
+.contact-page .contact-heading {
+    color: #8b4513;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.contact-page .card {
+    border: 1px solid #e9e1da;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(80, 45, 20, 0.07);
+}
+
+    .contact-page .card h4 {
         color: #8b4513;
-        font-size: 30px;
         font-weight: 700;
     }
 
-    .contact-page .card {
-        border: 1px solid #e9e1da;
-        border-radius: 10px;
-        box-shadow: 0 4px 14px rgba(80, 45, 20, 0.07);
+.contact-page .btn-success {
+    background-color: #f47721;
+    border-color: #f47721;
+    color: #fff;
+    font-weight: 600;
+}
+
+    .contact-page .btn-success:hover {
+        background-color: #d85e12;
+        border-color: #d85e12;
     }
 
-        .contact-page .card h4 {
-            color: #8b4513;
-            font-weight: 700;
-        }
+.contact-page .form-control:focus,
+.contact-page .form-select:focus {
+    border-color: #f47721;
+    box-shadow: 0 0 0 3px rgba(244, 119, 33, 0.15);
+}
 
-    .contact-page .btn-success {
-        background-color: #f47721;
-        border-color: #f47721;
-        color: #fff;
-        font-weight: 600;
+.contact-page .bg-light {
+    background-color: #fff6ed !important;
+}
+
+.contact-page a {
+    color: #8b4513;
+    text-decoration: none;
+}
+
+    .contact-page a:hover {
+        color: #f47721;
+        text-decoration: underline;
     }
-
-        .contact-page .btn-success:hover {
-            background-color: #d85e12;
-            border-color: #d85e12;
-        }
-
-    .contact-page .form-control:focus,
-    .contact-page .form-select:focus {
-        border-color: #f47721;
-        box-shadow: 0 0 0 3px rgba(244, 119, 33, 0.15);
-    }
-
-    .contact-page .bg-light {
-        background-color: #fff6ed !important;
-    }
-
-    .contact-page a {
-        color: #8b4513;
-        text-decoration: none;
-    }
-
-        .contact-page a:hover {
-            color: #f47721;
-            text-decoration: underline;
-        }
 
 @media (max-width: 767px) {
     .contact-page {
@@ -3490,115 +3490,115 @@ main {
     font-size: 13px;
 }
 
-    .contact-page .contact-heading {
+.contact-page .contact-heading {
+    color: #98450f;
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contact-page .contact-subtitle {
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    max-width: 600px;
+    margin: 8px auto 25px;
+    line-height: 1.6;
+}
+
+.contact-page .card {
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.09);
+    margin-bottom: 18px;
+}
+
+.contact-page .card-body {
+    padding: 18px;
+}
+
+.contact-page .card h4 {
+    color: #14764a;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-page .card h6 {
+    color: #98450f;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.contact-page .form-label {
+    display: block;
+    color: #333;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.contact-page .form-control,
+.contact-page .form-select {
+    width: 100%;
+    min-height: 34px;
+    padding: 7px 9px;
+    border: 1px solid #d4d9df;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+.contact-page textarea.form-control {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.contact-page .form-control:focus,
+.contact-page .form-select:focus {
+    border-color: #e87824;
+    box-shadow: 0 0 0 2px rgba(232, 120, 36, 0.13);
+}
+
+.contact-page .btn-success {
+    width: 100%;
+    min-height: 35px;
+    background: #278650;
+    border: 1px solid #278650;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+    .contact-page .btn-success:hover {
+        background: #1c6d3f;
+        border-color: #1c6d3f;
+    }
+
+.contact-page .bg-light {
+    background: #f5f4d9 !important;
+}
+
+.contact-page a {
+    color: #17804f;
+    text-decoration: none;
+}
+
+    .contact-page a:hover {
         color: #98450f;
-        font-size: 27px;
-        font-weight: 700;
-        text-align: center;
+        text-decoration: underline;
     }
 
-    .contact-page .contact-subtitle {
-        color: #666;
-        font-size: 12px;
-        text-align: center;
-        max-width: 600px;
-        margin: 8px auto 25px;
-        line-height: 1.6;
-    }
+.contact-page p {
+    line-height: 1.6;
+}
 
-    .contact-page .card {
-        background: #fff;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.09);
-        margin-bottom: 18px;
-    }
-
-    .contact-page .card-body {
-        padding: 18px;
-    }
-
-    .contact-page .card h4 {
-        color: #14764a;
-        font-size: 17px;
-        font-weight: 700;
-        margin-bottom: 10px;
-    }
-
-    .contact-page .card h6 {
-        color: #98450f;
-        font-size: 12px;
-        font-weight: 700;
-    }
-
-    .contact-page .form-label {
-        display: block;
-        color: #333;
-        font-size: 11px;
-        font-weight: 600;
-        margin-bottom: 4px;
-    }
-
-    .contact-page .form-control,
-    .contact-page .form-select {
-        width: 100%;
-        min-height: 34px;
-        padding: 7px 9px;
-        border: 1px solid #d4d9df;
-        border-radius: 4px;
-        background-color: #fff;
-        font-size: 12px;
-    }
-
-    .contact-page textarea.form-control {
-        min-height: 90px;
-        resize: vertical;
-    }
-
-    .contact-page .form-control:focus,
-    .contact-page .form-select:focus {
-        border-color: #e87824;
-        box-shadow: 0 0 0 2px rgba(232, 120, 36, 0.13);
-    }
-
-    .contact-page .btn-success {
-        width: 100%;
-        min-height: 35px;
-        background: #278650;
-        border: 1px solid #278650;
-        border-radius: 4px;
-        color: #fff;
-        font-size: 12px;
-        font-weight: 700;
-    }
-
-        .contact-page .btn-success:hover {
-            background: #1c6d3f;
-            border-color: #1c6d3f;
-        }
-
-    .contact-page .bg-light {
-        background: #f5f4d9 !important;
-    }
-
-    .contact-page a {
-        color: #17804f;
-        text-decoration: none;
-    }
-
-        .contact-page a:hover {
-            color: #98450f;
-            text-decoration: underline;
-        }
-
-    .contact-page p {
-        line-height: 1.6;
-    }
-
-    .contact-page hr {
-        border-color: #dedede;
-        margin: 14px 0;
-    }
+.contact-page hr {
+    border-color: #dedede;
+    margin: 14px 0;
+}
 
 @media (max-width: 767px) {
     .contact-page {
@@ -3613,3 +3613,539 @@ main {
             padding: 15px;
         }
 }
+
+/* =========================================
+   VEARIUM TRADERS - SERVICES PAGE
+   ========================================= */
+.services-page {
+    --services-green: #218548;
+    --services-dark-green: #146638;
+    --services-orange: #e98b32;
+    --services-text: #27352c;
+    --services-muted: #68736c;
+    color: var(--services-text);
+    background: #fff;
+}
+
+/* HERO SECTION */
+
+    .services-page .services-hero {
+        position: relative;
+        min-height: 390px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 75px 20px;
+        overflow: hidden;
+        background: linear-gradient( rgba(18, 24, 18, 0.68), rgba(18, 24, 18, 0.72) ),
+            url(/images/banners/servicepage.png);
+    }
+
+.services-page .services-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( 90deg, rgba(0, 0, 0, 0.22), transparent, rgba(0, 0, 0, 0.18) );
+}
+
+.services-page .services-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    text-align: center;
+    color: #fff;
+}
+
+.services-page .services-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #d7edb0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.services-page .services-hero h1 {
+    margin-bottom: 18px;
+    color: #fff;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.services-page .services-hero p {
+    max-width: 660px;
+    margin: 0 auto 26px;
+    color: #f3f3f3;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.services-page .services-primary-btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: var(--services-green);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+    .services-page .services-primary-btn:hover {
+        background: var(--services-dark-green);
+        transform: translateY(-2px);
+    }
+
+/* COMMON SECTION HEADINGS */
+
+.services-page .services-section-heading {
+    max-width: 720px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+    .services-page .services-section-heading > span {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: var(--services-green);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .services-page .services-section-heading h2 {
+        margin-bottom: 12px;
+        color: #243b2c;
+        font-size: clamp(25px, 3vw, 34px);
+        font-weight: 800;
+    }
+
+    .services-page .services-section-heading p {
+        margin-bottom: 0;
+        color: var(--services-muted);
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+/* SERVICE CARDS */
+
+.services-page .services-section {
+    padding: 75px 0;
+    background: #f7f9f7;
+}
+
+.services-page .service-card {
+    position: relative;
+    height: 100%;
+    min-height: 360px;
+    padding: 28px 25px;
+    border: 1px solid #e8ece8;
+    border-top: 4px solid var(--services-green);
+    border-radius: 9px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(25, 54, 35, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .services-page .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(25, 54, 35, 0.12);
+    }
+
+.services-page .service-card-blue {
+    border-top-color: #3478f6;
+}
+
+.services-page .service-card-green {
+    border-top-color: #18a558;
+}
+
+.services-page .service-card-orange {
+    border-top-color: #f07836;
+}
+
+.services-page .service-icon {
+    display: flex;
+    width: 54px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background: #eef7ef;
+    font-size: 27px;
+}
+
+.services-page .service-card h3 {
+    margin-bottom: 12px;
+    color: #263b2d;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.services-page .service-card > p {
+    min-height: 52px;
+    color: var(--services-muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.services-page .service-card h4 {
+    margin: 22px 0 12px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.services-page .service-card ul {
+    padding-left: 18px;
+    margin-bottom: 24px;
+}
+
+.services-page .service-card li {
+    padding: 4px 0;
+    color: #58645b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.services-page .service-link {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 4px;
+    background: var(--services-green);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+    .services-page .service-link:hover {
+        background: var(--services-dark-green);
+        color: #fff;
+    }
+
+/* SERVICE PROCESS */
+
+.services-page .services-process-section {
+    padding: 70px 0;
+    background: #f5f5df;
+}
+
+.services-page .process-card {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 22px 20px;
+    border: 1px solid #e8e8d6;
+    border-radius: 7px;
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+    .services-page .process-card:hover {
+        transform: translateY(-3px);
+    }
+
+.services-page .process-number {
+    display: flex;
+    flex-shrink: 0;
+    width: 39px;
+    height: 39px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--services-green);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.services-page .process-card h3 {
+    margin: 2px 0 8px;
+    color: #2d4735;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.services-page .process-card p {
+    margin-bottom: 0;
+    color: var(--services-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* COMMODITY CAPABILITIES */
+
+.services-page .services-capabilities-section {
+    padding: 75px 0;
+    background: #fff;
+}
+
+.services-page .capability-card {
+    height: 100%;
+    padding: 28px 24px;
+    border: 1px solid #e8ede8;
+    border-radius: 9px;
+    background: #fff;
+    box-shadow: 0 4px 17px rgba(25, 54, 35, 0.06);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+    .services-page .capability-card:hover {
+        transform: translateY(-5px);
+        border-color: #9ac9a7;
+    }
+
+.services-page .capability-icon {
+    margin-bottom: 16px;
+    font-size: 34px;
+}
+
+.services-page .capability-card h3 {
+    margin-bottom: 10px;
+    color: #2b4633;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.services-page .capability-card p {
+    margin-bottom: 0;
+    color: var(--services-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* WHY CHOOSE US */
+
+.services-page .services-benefits-section {
+    padding: 70px 0;
+    background: #e8f2e9;
+}
+
+.services-page .benefit-card {
+    height: 100%;
+    padding: 20px 12px;
+    text-align: center;
+}
+
+.services-page .benefit-icon {
+    display: flex;
+    width: 58px;
+    height: 58px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--services-green);
+    font-size: 25px;
+    font-weight: 800;
+    box-shadow: 0 4px 12px rgba(25, 54, 35, 0.08);
+}
+
+.services-page .benefit-card h3 {
+    margin-bottom: 10px;
+    color: #2c4734;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.services-page .benefit-card p {
+    margin-bottom: 0;
+    color: #647067;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* FINAL CALL TO ACTION */
+
+.services-page .services-cta-section {
+    padding: 65px 0;
+    background: #f7f9f7;
+}
+
+.services-page .services-cta-box {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 48px 25px;
+    border-radius: 10px;
+    background: linear-gradient( 120deg, #278c50, #17852e );
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(30, 110, 56, 0.16);
+}
+
+    .services-page .services-cta-box h2 {
+        margin-bottom: 15px;
+        color: #fff;
+        font-size: clamp(25px, 3vw, 33px);
+        font-weight: 800;
+    }
+
+    .services-page .services-cta-box p {
+        max-width: 560px;
+        margin: 0 auto 25px;
+        color: #f0fff3;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+.services-page .services-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.services-page .services-cta-light-btn,
+.services-page .services-cta-outline-btn {
+    display: inline-block;
+    padding: 12px 23px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.services-page .services-cta-light-btn {
+    background: #fff;
+    color: #207541;
+}
+
+    .services-page .services-cta-light-btn:hover {
+        background: #eaf6ed;
+        color: #14582f;
+    }
+
+.services-page .services-cta-outline-btn {
+    background: transparent;
+    color: #fff;
+}
+
+    .services-page .services-cta-outline-btn:hover {
+        background: #fff;
+        color: #207541;
+    }
+
+/* TABLET AND MOBILE RESPONSIVENESS */
+
+@media (max-width: 991.98px) {
+    .services-page .services-hero {
+        min-height: 350px;
+        padding: 65px 20px;
+    }
+
+    .services-page .services-section,
+    .services-page .services-capabilities-section {
+        padding: 55px 0;
+    }
+
+    .services-page .services-process-section,
+    .services-page .services-benefits-section {
+        padding: 50px 0;
+    }
+
+    .services-page .service-card {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .services-page .services-hero {
+        min-height: 330px;
+        padding: 55px 18px;
+        background-position: center;
+    }
+
+    .services-page .services-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .services-page .services-hero h1 {
+        font-size: 29px;
+    }
+
+    .services-page .services-hero p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .services-page .services-section-heading {
+        margin-bottom: 28px;
+    }
+
+        .services-page .services-section-heading h2 {
+            font-size: 25px;
+        }
+
+        .services-page .services-section-heading p {
+            font-size: 13px;
+        }
+
+    .services-page .service-card {
+        padding: 23px 20px;
+    }
+
+        .services-page .service-card h3 {
+            font-size: 19px;
+        }
+
+    .services-page .process-card {
+        padding: 18px 15px;
+    }
+
+    .services-page .capability-card {
+        padding: 21px 15px;
+    }
+
+        .services-page .capability-card h3 {
+            font-size: 17px;
+        }
+
+        .services-page .capability-card p,
+        .services-page .benefit-card p {
+            font-size: 12px;
+        }
+
+    .services-page .benefit-card {
+        padding: 15px 5px;
+    }
+
+    .services-page .benefit-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 21px;
+    }
+
+    .services-page .benefit-card h3 {
+        font-size: 14px;
+    }
+
+    .services-page .services-cta-box {
+        padding: 35px 18px;
+    }
+
+        .services-page .services-cta-box p {
+            font-size: 13px;
+        }
+
+    .services-page .services-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .services-page .services-cta-light-btn,
+    .services-page .services-cta-outline-btn {
+        text-align: center;
+    }
+}
+
+
+

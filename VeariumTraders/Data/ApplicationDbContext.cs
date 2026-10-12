@@ -1,10 +1,11 @@
 ﻿
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using VeariumTraders.Models;
 
 namespace VeariumTraders.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(
             DbContextOptions<ApplicationDbContext> options)
@@ -13,6 +14,8 @@ namespace VeariumTraders.Data
         }
 
         public DbSet<BulkEnquiry> BulkEnquiries { get; set; }
+
+        public DbSet<ContactEnquiry> ContactEnquiries { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

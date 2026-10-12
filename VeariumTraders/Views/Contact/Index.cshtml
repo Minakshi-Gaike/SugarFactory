@@ -13,20 +13,27 @@
         </p>
     </div>
 
-    @if (ViewBag.Success != null)
+    
+    @if (TempData["SuccessMessage"] != null)
     {
-        <div class="alert alert-success">
-            @ViewBag.Success
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close">
+            </button>
         </div>
     }
 
     @if (ViewBag.Error != null)
     {
-        <div class="alert alert-danger">
+        <div class="alert alert-danger" role="alert">
             @ViewBag.Error
         </div>
     }
-
+    
     <div class="row g-4">
 
         <!-- Contact Form -->

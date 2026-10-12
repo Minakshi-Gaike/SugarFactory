@@ -1,10 +1,8 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
 using VeariumTraders.Data;
 
 namespace VeariumTraders.Controllers
@@ -12,14 +10,14 @@ namespace VeariumTraders.Controllers
     public class AdminController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly IConfiguration _configuration;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
         public AdminController(
             ApplicationDbContext context,
-            IConfiguration configuration)
+            SignInManager<IdentityUser> signInManager)
         {
             _context = context;
-            _configuration = configuration;
+            _signInManager = signInManager;
         }
 
         // Display Login Page
@@ -30,7 +28,7 @@ namespace VeariumTraders.Controllers
             return View();
         }
 
-        // Validate Admin Credentials
+        // Validate Admin Credentials using Identity
         [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -38,35 +36,27 @@ namespace VeariumTraders.Controllers
             string username,
             string password)
         {
-            var adminUsername =
-                _configuration["AdminLogin:Username"];
+            var result = await _signInManager.PasswordSignInAsync(
+                username,
+                password,
+                isPersistent: false,
+                lockoutOnFailure: true);
 
-            var adminPassword =
-                _configuration["AdminLogin:Password"];
-
-            if (username == adminUsername &&
-                password == adminPassword)
+            if (result.Succeeded)
             {
-                var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, username),
-                    new Claim(ClaimTypes.Role, "Admin")
-                };
-
-                var identity = new ClaimsIdentity(
-                    claims,
-                    CookieAuthenticationDefaults.AuthenticationScheme);
-
-                var principal = new ClaimsPrincipal(identity);
-
-                await HttpContext.SignInAsync(
-                    CookieAuthenticationDefaults.AuthenticationScheme,
-                    principal);
-
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewBag.Error = "Invalid username or password.";
+            if (result.IsLockedOut)
+            {
+                ViewBag.Error =
+                    "Too many failed attempts. Please try again after 15 minutes.";
+            }
+            else
+            {
+                ViewBag.Error = "Invalid username or password.";
+            }
+
             return View();
         }
 
@@ -87,8 +77,7 @@ namespace VeariumTraders.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
-            await HttpContext.SignOutAsync(
-                CookieAuthenticationDefaults.AuthenticationScheme);
+            await _signInManager.SignOutAsync();
 
             return RedirectToAction(nameof(Login));
         }
