@@ -1,4 +1,4 @@
-
+using VeariumTraders.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using VeariumTraders.Data;
@@ -7,6 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // MVC
 builder.Services.AddControllersWithViews();
+
+// Email Service
+builder.Services.AddTransient<EmailSender>();
 
 // Database connection
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -61,5 +64,15 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
+
+using (var scope = app.Services.CreateScope())
+{
+    await IdentitySeeder.SeedAdminAsync(
+        scope.ServiceProvider,
+        app.Configuration);
+}
+
+app.Run();
+
 
 app.Run();

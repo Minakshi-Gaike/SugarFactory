@@ -16,6 +16,13 @@
               asp-action="Logout"
               method="post">
 
+            <a asp-controller="Admin"
+               asp-action="ChangePassword"
+               class="btn btn-outline-dark">
+                <i class="bi bi-key"></i> Change Password
+            </a>
+
+
             @Html.AntiForgeryToken()
 
             <button type="submit" class="btn btn-danger">
@@ -25,7 +32,7 @@
 
     </div>
 
-    
+       
 
     <div class="table-responsive">
         <table class="table table-bordered table-striped">

@@ -1,62 +1,797 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Admin Login";
+    Layout = null;
 }
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-5 col-lg-4">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | Vearium Traders</title>
 
-            <div class="card shadow p-4">
-                <h3 class="text-center mb-4">
-                    Admin Login
-                </h3>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" />
 
-                @if (ViewBag.Error != null)
-                {
-                    <div class="alert alert-danger">
-                        @ViewBag.Error
-                    </div>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <style>
+            :root {
+                --orange: #f36b16;
+                --dark-orange: #c94d08;
+                --brown: #74320b;
+                --cream: #fff8ef;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                font-family: "Segoe UI", Arial, sans-serif;
+                color: #292929;
+                background: #fff;
+            }
+
+            /* Navbar */
+            .site-navbar {
+                min-height: 72px;
+                background: rgba(255,255,255,.97);
+                box-shadow: 0 2px 12px rgba(0,0,0,.08);
+                position: relative;
+                z-index: 2;
+            }
+
+            .brand {
+                color: var(--orange);
+                font-size: 23px;
+                font-weight: 800;
+                letter-spacing: 2px;
+                text-decoration: none;
+            }
+
+            .brand small {
+                display: block;
+                text-align: center;
+                font-size: 8px;
+                letter-spacing: 4px;
+                margin-top: -5px;
+            }
+
+            .site-navbar .nav-link {
+                color: #292929;
+                font-size: 13px;
+                font-weight: 600;
+                padding: 10px 11px;
+            }
+
+            .site-navbar .nav-link:hover {
+                color: var(--orange);
+            }
+
+            .enquiry-btn {
+                background: var(--orange);
+                border: none;
+                border-radius: 8px;
+                color: white;
+                font-weight: 700;
+                padding: 11px 20px;
+                text-decoration: none;
+            }
+
+            .enquiry-btn:hover {
+                background: var(--dark-orange);
+                color: white;
+            }
+
+            /* Main hero */
+            .login-hero {
+                min-height: 490px;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                padding: 42px 0;
+                background:
+                    linear-gradient(90deg,
+                        rgba(255,248,239,.98) 0%,
+                        rgba(255,248,239,.90) 34%,
+                        rgba(255,248,239,.35) 60%,
+                        rgba(255,248,239,.04) 100%),
+                    url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85')
+                    center / cover no-repeat;
+            }
+
+            .hero-copy {
+                position: relative;
+                z-index: 1;
+                padding: 20px 0;
+            }
+
+            .eyebrow {
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 5px;
+                color: #626262;
+                margin-bottom: 12px;
+            }
+
+            .hero-title {
+                font-size: clamp(35px, 4vw, 56px);
+                line-height: 1.04;
+                font-weight: 850;
+                letter-spacing: -1px;
+                margin-bottom: 16px;
+            }
+
+            .hero-title span {
+                color: var(--orange);
+            }
+
+            .hero-description {
+                max-width: 390px;
+                font-size: 19px;
+                color: #5d5d5d;
+                font-weight: 500;
+                line-height: 1.5;
+            }
+
+            .feature-list {
+                display: flex;
+                gap: 18px;
+                margin-top: 27px;
+            }
+
+            .feature {
+                width: 100px;
+                text-align: center;
+                font-size: 13px;
+                font-weight: 700;
+            }
+
+            .feature-icon {
+                width: 64px;
+                height: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 10px;
+                border-radius: 15px;
+                background: rgba(255,255,255,.83);
+                color: var(--orange);
+                font-size: 29px;
+                box-shadow: 0 5px 18px rgba(80,40,10,.05);
+            }
+
+            /* Login card */
+            .login-card {
+                position: relative;
+                z-index: 1;
+                max-width: 450px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 28px 30px 24px;
+                background: rgba(255,255,255,.96);
+                border: 1px solid rgba(220,220,220,.95);
+                border-radius: 22px;
+                box-shadow: 0 18px 55px rgba(58,37,19,.19);
+            }
+
+            .lock-icon {
+                width: 62px;
+                height: 62px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 13px;
+                color: white;
+                background: linear-gradient(135deg, #ff8a00, #e95b0b);
+                border-radius: 50%;
+                font-size: 26px;
+                box-shadow: 0 7px 18px rgba(243,107,22,.25);
+            }
+
+            .login-heading {
+                text-align: center;
+                font-weight: 800;
+                font-size: 27px;
+                margin-bottom: 5px;
+            }
+
+            .login-subtitle {
+                text-align: center;
+                color: #777;
+                font-size: 13px;
+                margin-bottom: 22px;
+            }
+
+            .input-wrap {
+                position: relative;
+                margin-bottom: 13px;
+            }
+
+            .input-wrap > i {
+                position: absolute;
+                top: 14px;
+                left: 15px;
+                color: #555;
+            }
+
+            .login-input {
+                width: 100%;
+                height: 45px;
+                padding: 10px 42px;
+                border: 1px solid #d8dce2;
+                border-radius: 10px;
+                outline: none;
+                background: #fff;
+                font-size: 14px;
+                transition: .2s;
+            }
+
+            .login-input:focus {
+                border-color: var(--orange);
+                box-shadow: 0 0 0 3px rgba(243,107,22,.12);
+            }
+
+            .password-toggle {
+                position: absolute;
+                top: 8px;
+                right: 10px;
+                border: none;
+                background: transparent;
+                color: #555;
+                padding: 4px;
+            }
+
+            .form-options {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 8px;
+                margin: 15px 0 19px;
+                font-size: 12px;
+            }
+
+            .forgot-link {
+                color: var(--dark-orange);
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            .forgot-link:hover {
+                text-decoration: underline;
+            }
+
+            .login-submit {
+                width: 100%;
+                min-height: 46px;
+                border: none;
+                border-radius: 25px;
+                color: white;
+                font-size: 15px;
+                font-weight: 750;
+                background: linear-gradient(100deg, #ff5b0b, #c95108);
+                box-shadow: 0 6px 15px rgba(210,83,10,.2);
+                transition: transform .2s, box-shadow .2s;
+            }
+
+            .login-submit:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(210,83,10,.25);
+            }
+
+            .secure-note {
+                border-top: 1px solid #eee;
+                margin-top: 19px;
+                padding-top: 14px;
+                text-align: center;
+                color: #777;
+                font-size: 12px;
+            }
+
+            .secure-note i {
+                color: #26854a;
+            }
+
+            /* Footer */
+            .site-footer {
+                background: linear-gradient(120deg, #79340d, #8e410f);
+                color: white;
+                padding: 38px 0 28px;
+            }
+
+            .footer-heading {
+                font-size: 17px;
+                font-weight: 800;
+                margin-bottom: 20px;
+                position: relative;
+            }
+
+            .footer-heading::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -9px;
+                width: 38px;
+                height: 3px;
+                background: #ff831d;
+                border-radius: 4px;
+            }
+
+            .footer-description {
+                max-width: 290px;
+                font-size: 13px;
+                line-height: 1.8;
+                color: #fff0e4;
+            }
+
+            .footer-link {
+                display: block;
+                color: #fff3e9;
+                text-decoration: none;
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+
+            .footer-link i {
+                color: #ff8a24;
+                margin-right: 7px;
+            }
+
+            .footer-link:hover {
+                color: #ffb16e;
+            }
+
+            .footer-contact {
+                color: #fff2e7;
+                font-size: 13px;
+                line-height: 1.8;
+                overflow-wrap: anywhere;
+            }
+
+            .footer-contact i {
+                color: #ff8a24;
+                margin-right: 7px;
+            }
+
+            .social-links {
+                display: flex;
+                gap: 10px;
+                margin-top: 17px;
+            }
+
+            .social-links a {
+                width: 35px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: white;
+                background: rgba(255,255,255,.17);
+                text-decoration: none;
+            }
+
+            .social-links a:hover {
+                background: var(--orange);
+            }
+
+            .footer-bottom {
+                border-top: 1px solid rgba(255,255,255,.17);
+                margin-top: 28px;
+                padding-top: 17px;
+                text-align: center;
+                color: #f8dfca;
+                font-size: 12px;
+            }
+
+            @@media (max-width: 991px) {
+                .login-hero {
+                    background:
+                        linear-gradient(rgba(255,248,239,.90),
+                                        rgba(255,248,239,.92)),
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80')
+                        center / cover no-repeat;
                 }
 
-                <form asp-controller="Admin"
-                      asp-action="Login"
-                      method="post">
+                .hero-copy {
+                    text-align: center;
+                    margin-bottom: 25px;
+                }
 
-                    @Html.AntiForgeryToken()
+                .hero-description {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
 
+                .feature-list {
+                    justify-content: center;
+                }
+
+                .login-card {
+                    max-width: 470px;
+                }
+            }
+
+            @@media (max-width: 575px) {
+                .login-hero {
+                    padding: 25px 0 35px;
+                }
+
+                .hero-title {
+                    font-size: 38px;
+                }
+
+                .hero-description {
+                    font-size: 16px;
+                }
+
+                .feature-list {
+                    gap: 5px;
+                }
+
+                .feature {
+                    width: 94px;
+                    font-size: 11px;
+                }
+
+                .feature-icon {
+                    width: 54px;
+                    height: 54px;
+                    font-size: 24px;
+                }
+
+                .login-card {
+                    padding: 24px 19px;
+                    border-radius: 17px;
+                }
+
+                .login-heading {
+                    font-size: 24px;
+                }
+
+                .form-options {
+                    font-size: 11px;
+                }
+
+                .site-footer {
+                    padding-top: 30px;
+                }
+            }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg site-navbar">
+        <div class="container">
+            <a class="brand" asp-controller="Home" asp-action="Index">
+                <i class="bi bi-sun-fill"></i> VEARIUM
+                <small>TRADERS</small>
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="About">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Products" asp-action="Index">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="AgricultureTrading">Agriculture & Trading</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Contact" asp-action="Index">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="enquiry-btn"
+                           asp-controller="Contact"
+                           asp-action="Index">Get Enquiry</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Hero -->
+    <section class="login-hero">
+        <div class="container">
+            <div class="row align-items-center g-4">
+
+                <!-- Left Content -->
+                <div class="col-lg-5">
+                    <div class="hero-copy">
+                        <div class="eyebrow">WELCOME TO VEARIUM</div>
+
+                        <h1 class="hero-title">
+                            VEARIUM<br />
+                            <span>TRADERS</span>
+                        </h1>
+
+                        <p class="hero-description">
+                            Your Trusted Partner in Agricultural
+                            Commodity Trading.
+                        </p>
+
+                        <div class="feature-list">
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="bi bi-box-seam-fill"></i>
+                                </div>
+                                Quality<br />Products
+                            </div>
+
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                Trusted<br />Services
+                            </div>
+
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                </div>
+                                Sustainable<br />Growth
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Login Form -->
+                <div class="col-lg-7">
+                    <div class="login-card">
+
+                        <div class="lock-icon">
+                            <i class="bi bi-lock-fill"></i>
+                        </div>
+
+                        <h2 class="login-heading">Admin Login</h2>
+
+                        <p class="login-subtitle">
+                            Access your Vearium Traders admin panel
+                        </p>
+
+                        @if (ViewBag.Error != null)
+                        {
+                            <div class="alert alert-danger py-2" role="alert">
+                                @ViewBag.Error
+                            </div>
+                        }
+
+                        @if (TempData["ResetSuccess"] != null)
+                        {
+                            <div class="alert alert-success py-2" role="alert">
+                                @TempData["ResetSuccess"]
+                            </div>
+                        }
+
+                        <form asp-controller="Admin"
+                              asp-action="Login"
+                              method="post">
+
+                            @Html.AntiForgeryToken()
+
+                            <div class="input-wrap">
+                                <i class="bi bi-person"></i>
+                                <input type="text"
+                                       name="username"
+                                       class="login-input"
+                                       placeholder="Enter username"
+                                       autocomplete="username"
+                                       required />
+                            </div>
+
+                            <div class="input-wrap">
+                                <i class="bi bi-lock"></i>
+                                <input type="password"
+                                       id="loginPassword"
+                                       name="password"
+                                       class="login-input"
+                                       placeholder="Enter password"
+                                       autocomplete="current-password"
+                                       required />
+
+                                <button type="button"
+                                        class="password-toggle"
+                                        onclick="togglePassword()"
+                                        aria-label="Show or hide password">
+                                    <i id="passwordEye" class="bi bi-eye"></i>
+                                </button>
+                            </div>
+
+                           
+                            <div class="form-options">
+                                <label class="remember-me">
+                                    <input type="checkbox"
+                                           name="rememberMe"
+                                           value="true" />
+                                    <span>Remember me</span>
+                                </label>
+
+                                <a asp-controller="Admin"
+                                   asp-action="ForgotPassword"
+                                   class="forgot-link">
+                                    Forgot Password?
+                                </a>
+                            </div>
+
+
+                            <button type="submit" class="login-submit">
+                                <i class="bi bi-box-arrow-in-right me-2"></i>
+                                Login to Dashboard
+                            </button>
+                        </form>
+
+                        <div class="secure-note">
+                            <i class="bi bi-shield-check me-1"></i>
+                            Protected by secure authentication
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6">
                     <div class="mb-3">
-                        <label class="form-label">
-                            Username
-                        </label>
-
-                        <input type="text"
-                               name="username"
-                               class="form-control"
-                               placeholder="Enter username"
-                               required />
+                        <a class="brand text-white" asp-controller="Home" asp-action="Index">
+                            <i class="bi bi-sun-fill text-warning"></i> VEARIUM
+                            <small>TRADERS</small>
+                        </a>
                     </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">
-                            Password
-                        </label>
+                    <p class="footer-description">
+                        Vearium Traders is engaged in agricultural
+                        commodity trading and bulk supply of quality products.
+                    </p>
 
-                        <input type="password"
-                               name="password"
-                               class="form-control"
-                               placeholder="Enter password"
-                               required />
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">Quick Links</h5>
+
+                    <a class="footer-link" asp-controller="Home" asp-action="Index">
+                        <i class="bi bi-chevron-right"></i>Home
+                    </a>
+                    <a class="footer-link" asp-controller="Home" asp-action="About">
+                        <i class="bi bi-chevron-right"></i>About Us
+                    </a>
+                    <a class="footer-link" asp-controller="Products" asp-action="Index">
+                        <i class="bi bi-chevron-right"></i>Products
+                    </a>
+                    <a class="footer-link" asp-controller="Home" asp-action="Services">
+                        <i class="bi bi-chevron-right"></i>Services
+                    </a>
+                    <a class="footer-link" asp-controller="Contact" asp-action="Index">
+                        <i class="bi bi-chevron-right"></i>Contact
+                    </a>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">Products</h5>
+
+                    <a class="footer-link" asp-controller="Products" asp-action="Index">
+                        <i class="bi bi-chevron-right"></i>Maize
+                    </a>
+                    <a class="footer-link" asp-controller="Products" asp-action="Index">
+                        <i class="bi bi-chevron-right"></i>Sugar
+                    </a>
+                    <a class="footer-link" asp-controller="Products" asp-action="Index">
+                        <i class="bi bi-chevron-right"></i>Jaggery
+                    </a>
+                    <a class="footer-link" asp-controller="Products" asp-action="Index">
+                        <i class="bi bi-chevron-right"></i>Jaggery Powder
+                    </a>
+                    <a class="footer-link" asp-controller="Products" asp-action="Index">
+                        <i class="bi bi-chevron-right"></i>Coconut Shell
+                    </a>
+                </div>
+
+                <div class="col-lg-5 col-md-6">
+                    <h5 class="footer-heading">Contact Us</h5>
+
+                    <div class="footer-contact mb-3">
+                        <div>
+                            <i class="bi bi-telephone-fill"></i>
+                            +91 9028215279
+                        </div>
+                        <div>
+                            <i class="bi bi-envelope-fill"></i>
+                            veariumtraders@gmail.com
+                        </div>
                     </div>
 
-                    <button type="submit"
-                            class="btn btn-primary w-100">
-                        Login
-                    </button>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="footer-contact">
+                                <strong>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    Registered Office
+                                </strong>
+                                <br />
+                                Building No./Flat No.: 40/A/2<br />
+                                Shivaji Chouk, Yarand Galli<br />
+                                Shirguppi, Belagavi<br />
+                                Karnataka - 591237
+                            </div>
+                        </div>
 
-                </form>
+                        <div class="col-sm-6">
+                            <div class="footer-contact">
+                                <strong>
+                                    <i class="bi bi-building"></i>
+                                    Office Address
+                                </strong>
+                                <br />
+                                Shree Laxmi Park, Dhayari<br />
+                                Near Mantar Mandir<br />
+                                Dhayari, Pune - 411041<br />
+                                B Wing, 302, Vanita Desai
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
+            <div class="footer-bottom">
+                © @DateTime.Now.Year Vearium Traders. All Rights Reserved.
+            </div>
         </div>
-    </div>
-</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+            function togglePassword() {
+                const input = document.getElementById("loginPassword");
+                const icon = document.getElementById("passwordEye");
+
+                if (input.type === "password") {
+                    input.type = "text";
+                    icon.classList.remove("bi-eye");
+                    icon.classList.add("bi-eye-slash");
+                } else {
+                    input.type = "password";
+                    icon.classList.remove("bi-eye-slash");
+                    icon.classList.add("bi-eye");
+                }
+            }
+    </script>
+
+</body>
+</html>
