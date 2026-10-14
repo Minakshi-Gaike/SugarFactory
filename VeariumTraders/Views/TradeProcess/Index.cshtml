@@ -1,0 +1,495 @@
+﻿@{
+    ViewData["Title"] = "Trade Process";
+}
+
+<style>
+    .trade-process {
+        background: #f8f9fa;
+        padding: 35px 24px;
+        color: #24334b;
+    }
+
+        .trade-process .tp-wrap {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .trade-process .tp-tabs {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 12px;
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 4px 3px 12px;
+            margin-bottom: 28px;
+            box-sizing: border-box;
+        }
+
+        .trade-process .tp-tab {
+            flex: 1 0 0;
+            min-width: 125px;
+            width: auto;
+            min-height: 96px;
+            padding: 12px 8px;
+            border: 1px solid #e7e9ed;
+            border-radius: 8px;
+            background: white;
+            color: #26364b;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+            .trade-process .tp-tab .tp-icon {
+                display: block;
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+            .trade-process .tp-tab strong {
+                display: block;
+                font-size: 13px;
+                margin-bottom: 3px;
+            }
+
+            .trade-process .tp-tab.active {
+                background: #28894f;
+                border-color: #28894f;
+                color: white;
+                box-shadow: 0 4px 12px #28894f22;
+            }
+
+        .trade-process .tp-panel {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px #00000012;
+        }
+
+        .trade-process .tp-summary {
+            background: #28894f;
+            color: white;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .trade-process .tp-summary-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .trade-process .tp-summary h2 {
+            font-size: 23px;
+            line-height: 1.35;
+            font-weight: 800;
+            color: white;
+        }
+
+        .trade-process .tp-summary p {
+            color: white;
+            line-height: 1.7;
+            margin: 0 0 20px;
+        }
+
+        .trade-process .tp-meta {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin-top: 15px;
+        }
+
+        .trade-process .tp-meta-icon {
+            background: #ffffff25;
+            border-radius: 7px;
+            padding: 9px;
+            font-size: 18px;
+        }
+
+        .trade-process .tp-meta small {
+            display: block;
+            color: #e1f3e6;
+            margin-bottom: 2px;
+        }
+
+        .trade-process .tp-meta strong {
+            display: block;
+            color: white;
+            line-height: 1.5;
+        }
+
+        .trade-process .tp-details {
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .trade-process .tp-details h3 {
+                color: #a84b1b;
+                font-size: 19px;
+                font-weight: 800;
+                margin-bottom: 22px;
+            }
+
+            .trade-process .tp-details ol {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .trade-process .tp-details li {
+                display: flex;
+                gap: 12px;
+                align-items: flex-start;
+                margin-bottom: 17px;
+                color: #394963;
+                line-height: 1.6;
+            }
+
+        .trade-process .tp-number {
+            flex: 0 0 26px;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #f4f5dc;
+            color: #28894f;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .trade-process .tp-actions {
+            border-top: 1px solid #e1e5eb;
+            padding-top: 20px;
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+            .trade-process .tp-actions button {
+                border: 0;
+                border-radius: 6px;
+                padding: 10px 16px;
+                font-size: 12px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+
+        .trade-process .tp-prev {
+            background: #f0f1f3;
+            color: #596579;
+        }
+
+        .trade-process .tp-next {
+            background: #28894f;
+            color: white;
+        }
+
+        .trade-process .tp-actions button:disabled {
+            opacity: .45;
+            cursor: not-allowed;
+        }
+
+    @@media (max-width: 700px) {
+        .trade-process {
+            padding: 22px 12px;
+        }
+
+            .trade-process .tp-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .trade-process .tp-summary,
+            .trade-process .tp-details {
+                padding: 22px;
+            }
+
+                .trade-process .tp-summary h2 {
+                    font-size: 21px;
+                }
+    }
+</style>
+
+<div class="trade-process">
+    <div class="tp-wrap">
+
+        <div class="tp-tabs" role="tablist">
+            <button type="button" class="tp-tab active" data-step="0">
+                <span class="tp-icon">📝</span>
+                <strong>Step 1</strong>
+                Inquiry &amp; Requirement Analysis
+            </button>
+
+            <button type="button" class="tp-tab" data-step="1">
+                <span class="tp-icon">📄</span>
+                <strong>Step 2</strong>
+                Contract Finalization
+            </button>
+
+            <button type="button" class="tp-tab" data-step="2">
+                <span class="tp-icon">🔍</span>
+                <strong>Step 3</strong>
+                Sourcing &amp; Quality Verification
+            </button>
+
+            <button type="button" class="tp-tab" data-step="3">
+                <span class="tp-icon">🏭</span>
+                <strong>Step 4</strong>
+                Processing &amp; Packaging
+            </button>
+
+            <button type="button" class="tp-tab" data-step="4">
+                <span class="tp-icon">🚢</span>
+                <strong>Step 5</strong>
+                Logistics &amp; Shipping
+            </button>
+
+            <button type="button" class="tp-tab" data-step="5">
+                <span class="tp-icon">📦</span>
+                <strong>Step 6</strong>
+                Customs &amp; Clearance
+            </button>
+
+            <button type="button" class="tp-tab" data-step="6">
+                <span class="tp-icon">📦</span>
+                <strong>Step 7</strong>
+                Delivery &amp; After-Sales
+            </button>
+        </div>
+        <section class="tp-panel" aria-live="polite">
+
+            <div class="tp-summary">
+                <div class="tp-summary-icon" id="tp-icon">📝</div>
+
+                <h2 id="tp-title">
+                    Step 1: Inquiry &amp; Requirement Analysis
+                </h2>
+
+                <p id="tp-description">
+                    We begin by understanding your specific requirements,
+                    quality standards, and timeline.
+                </p>
+
+                <div class="tp-meta">
+                    <div class="tp-meta-icon">⏱️</div>
+                    <div>
+                        <small>Average Duration</small>
+                        <strong id="tp-duration">1-2 Days</strong>
+                    </div>
+                </div>
+
+                <div class="tp-meta">
+                    <div class="tp-meta-icon">📋</div>
+                    <div>
+                        <small>Key Documents</small>
+                        <strong id="tp-documents">
+                            Requirements Sheet, Specifications Document
+                        </strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tp-details">
+                <h3>Process Details</h3>
+
+                <ol id="tp-detail-list">
+                    <li><span class="tp-number">1</span><span>Initial consultation and requirement gathering</span></li>
+                    <li><span class="tp-number">2</span><span>Volume assessment and specifications</span></li>
+                    <li><span class="tp-number">3</span><span>Market analysis and feasibility study</span></li>
+                    <li><span class="tp-number">4</span><span>Budget estimation and quotation</span></li>
+                    <li><span class="tp-number">5</span><span>Timeline planning and scheduling</span></li>
+                </ol>
+
+                <div class="tp-actions">
+                    <button type="button" class="tp-prev" id="tp-prev" disabled>
+                        ← Previous Step
+                    </button>
+
+                    <button type="button" class="tp-next" id="tp-next">
+                        Next Step →
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+</div>
+
+<script>
+    (() => {
+        const steps = [
+            {
+                icon: "📝",
+                title: "Step 1: Inquiry & Requirement Analysis",
+                description: "We begin by understanding your specific requirements, quality standards, and timeline.",
+                duration: "1-2 Days",
+                documents: "Requirements Sheet, Specifications Document",
+                details: [
+                    "Initial consultation and requirement gathering",
+                    "Volume assessment and specifications",
+                    "Market analysis and feasibility study",
+                    "Budget estimation and quotation",
+                    "Timeline planning and scheduling"
+                ]
+            },
+            {
+                icon: "📄",
+                title: "Step 2: Contract Finalization",
+                description: "Commercial terms are reviewed and confirmed before the order proceeds.",
+                duration: "2-3 Days",
+                documents: "Quotation, Purchase Order, Sales Contract",
+                details: [
+                    "Quotation and price confirmation",
+                    "Product specifications and quantity approval",
+                    "Payment terms and delivery conditions",
+                    "Purchase Order or Sales Contract preparation",
+                    "Final order confirmation"
+                ]
+            },
+            {
+                icon: "🔍",
+                title: "Step 3: Sourcing & Quality Verification",
+                description: "Products are sourced from suitable suppliers and checked against buyer specifications.",
+                duration: "3-7 Days",
+                documents: "Supplier Details, Quality Specifications, Inspection Report",
+                details: [
+                    "Supplier identification and sourcing",
+                    "Product grade and quality verification",
+                    "Sample review where applicable",
+                    "Quantity and availability confirmation",
+                    "Quality approval before processing"
+                ]
+            },
+            {
+                icon: "🏭",
+                title: "Step 4: Processing & Packaging",
+                description: "Commodities are prepared, processed and packed according to agreed requirements.",
+                duration: "2-5 Days",
+                documents: "Packing Specifications, Quality Check Records",
+                details: [
+                    "Cleaning, sorting and grading where applicable",
+                    "Lot-wise segregation and preparation",
+                    "Packaging according to order requirements",
+                    "Label and package verification",
+                    "Pre-dispatch quality checks"
+                ]
+            },
+            {
+                icon: "🚢",
+                title: "Step 5: Logistics & Shipping",
+                description: "Transportation and shipping are coordinated according to agreed delivery terms.",
+                duration: "Depends on route",
+                documents: "Commercial Invoice, Packing List, Shipping Documents",
+                details: [
+                    "Transport and freight coordination",
+                    "Shipping schedule confirmation",
+                    "Preparation of trade documents",
+                    "Dispatch coordination",
+                    "Sharing shipment updates with the buyer"
+                ]
+            },
+            {
+                icon: "📦",
+                title: "Step 6: Customs & Clearance",
+                description: "Applicable clearance and delivery responsibilities are coordinated as agreed in the contract.",
+                duration: "Depends on destination",
+                documents: "Certificate of Origin, Inspection Certificates where applicable",
+                details: [
+                    "Review required shipment documents",
+                    "Coordinate applicable customs documentation",
+                    "Support communication with logistics partners",
+                    "Share delivery and dispatch updates",
+                    "Address post-delivery documentation queries"
+                ]
+            },
+
+            {
+                icon: "📦",
+                title: "Step 7: Delivery & After-Sales",
+                description: "Final delivery and post-delivery support services.",
+                duration: "2-5 Days",
+                documents: "Delivery Note, Feedback Form",
+                details: [
+                    "Final delivery to destination",
+                    "Unloading and warehousing",
+                    "Quality verification at destination",
+                    "Payment settlement",
+                    "Feedback collection and follow-up"
+                ]
+            }
+
+        ];
+
+        const tabs = [...document.querySelectorAll(".trade-process .tp-tab")];
+        const icon = document.getElementById("tp-icon");
+        const title = document.getElementById("tp-title");
+        const description = document.getElementById("tp-description");
+        const duration = document.getElementById("tp-duration");
+        const documents = document.getElementById("tp-documents");
+        const list = document.getElementById("tp-detail-list");
+        const prev = document.getElementById("tp-prev");
+        const next = document.getElementById("tp-next");
+
+        let current = 0;
+
+        function showStep(index) {
+            current = index;
+            const step = steps[current];
+
+            icon.textContent = step.icon;
+            title.textContent = step.title;
+            description.textContent = step.description;
+            duration.textContent = step.duration;
+            documents.textContent = step.documents;
+
+            list.replaceChildren();
+
+            step.details.forEach((text, index) => {
+                const li = document.createElement("li");
+
+                const number = document.createElement("span");
+                number.className = "tp-number";
+                number.textContent = index + 1;
+
+                const detail = document.createElement("span");
+                detail.textContent = text;
+
+                li.append(number, detail);
+                list.appendChild(li);
+            });
+
+            tabs.forEach((tab, i) => {
+                tab.classList.toggle("active", i === current);
+                tab.setAttribute("aria-selected", i === current ? "true" : "false");
+            });
+
+            prev.disabled = current === 0;
+            next.disabled = current === steps.length - 1;
+            next.textContent = current === steps.length - 1
+                ? "Completed"
+                : "Next Step →";
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                showStep(Number(tab.dataset.step));
+            });
+        });
+
+        prev.addEventListener("click", () => {
+            if (current > 0) showStep(current - 1);
+        });
+
+        next.addEventListener("click", () => {
+            if (current < steps.length - 1) showStep(current + 1);
+        });
+    })();
+</script>

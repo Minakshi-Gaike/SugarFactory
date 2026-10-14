@@ -1,0 +1,141 @@
+﻿@{
+    ViewData["Title"] = "Shipping Policy";
+}
+
+<style>
+    .shipping-page {
+        background: #f7f8fa;
+        padding: 40px 15px;
+        color: #273449;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .shipping-card {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 35px;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    }
+
+        .shipping-card h1 {
+            color: #a84b1b;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+    .shipping-section {
+        margin-bottom: 28px;
+    }
+
+        .shipping-section h2 {
+            color: #17324d;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .shipping-section ul {
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+
+        .shipping-section li {
+            margin-bottom: 6px;
+        }
+
+    .shipping-quote {
+        background: #f5f4dc;
+        border-left: 4px solid #b5a94b;
+        border-radius: 6px;
+        padding: 20px;
+        margin-top: 30px;
+        color: #604b16;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 16px;
+    }
+
+    @@media (max-width: 576px) {
+        .shipping-page {
+            padding: 20px 10px;
+        }
+
+        .shipping-card {
+            padding: 20px 16px;
+        }
+
+            .shipping-card h1 {
+                font-size: 25px;
+            }
+
+        .shipping-section h2 {
+            font-size: 18px;
+        }
+    }
+</style>
+
+<div class="shipping-page">
+    <div class="shipping-card">
+
+        <h1>Shipping Policy</h1>
+
+        <p class="mb-4">
+            Vearium Traders Private Limited is committed to ensuring
+            safe, timely, and transparent delivery of agro commodities
+            in accordance with agreed commercial terms and applicable
+            regulations.
+        </p>
+
+        <section class="shipping-section">
+            <h2>Shipping Scope</h2>
+
+            <p>
+                This policy applies to all domestic and international
+                shipments. Shipping terms are governed by agreed
+                contracts, invoices, and Incoterms®.
+            </p>
+        </section>
+
+        <section class="shipping-section">
+            <h2>Shipping Terms &amp; Responsibility</h2>
+
+            <ul>
+                <li>EXW, FOB, CIF, CFR or other agreed Incoterms®</li>
+                <li>Risk and title transfer as per contract</li>
+                <li>Any deviation requires written confirmation</li>
+            </ul>
+        </section>
+
+        <section class="shipping-section">
+            <h2>Logistics &amp; Documentation</h2>
+
+            <ul>
+                <li>Commercial Invoice</li>
+                <li>Packing List</li>
+                <li>Bill of Lading / LR</li>
+                <li>Certificate of Origin</li>
+                <li>Inspection Certificates (if applicable)</li>
+            </ul>
+        </section>
+
+        <section class="shipping-section">
+            <h2>Delays &amp; Force Majeure</h2>
+
+            <p>
+                The company shall not be liable for delays caused by
+                natural calamities, strikes, port congestion, regulatory
+                actions, or other force majeure events.
+            </p>
+        </section>
+
+        <div class="shipping-quote">
+            “Handled with care. Delivered with commitment.”
+        </div>
+
+    </div>
+</div>

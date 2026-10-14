@@ -1,0 +1,292 @@
+﻿@{
+    ViewData["Title"] = "Terms of Trade";
+}
+
+<style>
+    .trade-page {
+        background: #f7f8fa;
+        padding: 40px 15px;
+        color: #273449;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .trade-card {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 35px;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    }
+
+        .trade-card h1 {
+            color: #a84b1b;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+    .trade-updated {
+        color: #6b7280;
+        font-size: 12px;
+        margin-bottom: 22px;
+    }
+
+    .trade-intro {
+        margin-bottom: 25px;
+    }
+
+    .trade-step {
+        margin-bottom: 24px;
+    }
+
+        .trade-step h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #17324d;
+            margin-bottom: 8px;
+        }
+
+        .trade-step p {
+            margin-bottom: 8px;
+        }
+
+        .trade-step ul {
+            padding-left: 24px;
+            margin-bottom: 10px;
+        }
+
+        .trade-step li {
+            margin-bottom: 3px;
+        }
+
+    .trade-assurance {
+        background: #f5f4dc;
+        border-left: 4px solid #b5a94b;
+        border-radius: 6px;
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+        .trade-assurance h2 {
+            font-size: 19px;
+            color: #604b16;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .trade-assurance ul {
+            padding-left: 22px;
+        }
+
+    .trade-quote {
+        font-weight: 700;
+        color: #8b451b;
+        font-style: italic;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    @@media (max-width: 576px) {
+        .trade-page {
+            padding: 20px 10px;
+        }
+
+        .trade-card {
+            padding: 20px 16px;
+        }
+
+            .trade-card h1 {
+                font-size: 25px;
+            }
+
+        .trade-step h2 {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<div class="trade-page">
+    <div class="trade-card">
+
+        <h1>Terms of Trade</h1>
+
+        <p class="trade-updated">
+            Last updated: October 14, 2026
+        </p>
+
+        <p class="trade-intro">
+            At Vearium Traders Private Limited, our trade process is
+            structured to ensure clarity, compliance, and consistency
+            at every stage — from inquiry to final delivery.
+        </p>
+
+        <section class="trade-step">
+            <h2>Step 1: Buyer Inquiry &amp; Requirement Confirmation</h2>
+
+            <p>Buyer shares product inquiry with specifications such as:</p>
+
+            <ul>
+                <li>Commodity type</li>
+                <li>Grade / quality parameters</li>
+                <li>Quantity</li>
+                <li>Packaging requirements</li>
+                <li>Delivery terms (Incoterms®)</li>
+                <li>Destination port / location</li>
+            </ul>
+
+            <p>Our team reviews feasibility and aligns sourcing accordingly.</p>
+        </section>
+
+        <section class="trade-step">
+            <h2>Step 2: Commercial Offer &amp; Confirmation</h2>
+
+            <p>A formal quotation / offer is issued mentioning:</p>
+
+            <ul>
+                <li>Price and currency</li>
+                <li>Quality specifications</li>
+                <li>Packaging details</li>
+                <li>Delivery terms</li>
+                <li>Payment terms</li>
+                <li>Validity period</li>
+            </ul>
+
+            <p>Upon mutual acceptance, order confirmation is executed through:</p>
+
+            <ul>
+                <li>Purchase Order (PO)</li>
+                <li>Sales Contract / Proforma Invoice</li>
+            </ul>
+        </section>
+
+        <section class="trade-step">
+            <h2>Step 3: Payment &amp; Contract Compliance</h2>
+
+            <p>
+                Payment terms are followed strictly as per agreed conditions
+                (advance, LC, or other agreed modes).
+            </p>
+
+            <p>
+                Trade documentation and regulatory requirements are aligned
+                before execution.
+            </p>
+        </section>
+
+        <section class="trade-step">
+            <h2>Step 4: Procurement &amp; Quality Preparation</h2>
+
+            <p>
+                Commodities are procured from approved sources based on
+                buyer specifications.
+            </p>
+
+            <p>
+                Products undergo cleaning, sorting, grading, and lot-wise
+                segregation.
+            </p>
+
+            <p>Internal quality checks are performed prior to packing.</p>
+        </section>
+
+        <section class="trade-step">
+            <h2>Step 5: Packing &amp; Pre-Dispatch Verification</h2>
+
+            <p>Goods are packed using suitable, export-grade materials.</p>
+
+            <p>
+                Packaging and labeling are verified as per contract and
+                destination norms.
+            </p>
+
+            <p>
+                Pre-dispatch inspection or third-party inspection is
+                facilitated where required.
+            </p>
+        </section>
+
+        <section class="trade-step">
+            <h2>Step 6: Logistics &amp; Shipment Execution</h2>
+
+            <p>
+                Logistics arrangements are finalized based on agreed
+                Incoterms®.
+            </p>
+
+            <p>
+                Coordination with transporters, freight forwarders, and
+                ports is managed by our logistics team.
+            </p>
+
+            <p>Goods are dispatched as per the confirmed shipping schedule.</p>
+        </section>
+
+        <section class="trade-step">
+            <h2>Step 7: Documentation &amp; Dispatch Intimation</h2>
+
+            <p>
+                Shipping and trade documents are prepared accurately,
+                including:
+            </p>
+
+            <ul>
+                <li>Commercial Invoice</li>
+                <li>Packing List</li>
+                <li>Transport / Shipping Document</li>
+                <li>Certificate of Origin</li>
+                <li>Inspection / Quality Certificates (if applicable)</li>
+            </ul>
+
+            <p>
+                Buyers are informed of dispatch details and document copies
+                are shared promptly.
+            </p>
+        </section>
+
+        <section class="trade-step">
+            <h2>Step 8: Delivery &amp; Buyer Receipt</h2>
+
+            <p>
+                Delivery and risk transfer occur as per agreed Incoterms®.
+            </p>
+
+            <p>
+                Buyer arranges clearance, unloading, and inspection at destination.
+            </p>
+
+            <p>Any observations are handled as per contractual terms.</p>
+        </section>
+
+        <section class="trade-step">
+            <h2>Step 9: Post-Shipment Support</h2>
+
+            <p>
+                Continuous coordination for document clarification, trade
+                reconciliation, and buyer feedback.
+            </p>
+
+            <p>
+                Focus remains on long-term relationship and repeat business.
+            </p>
+        </section>
+
+        <div class="trade-assurance">
+            <h2>Our Trade Assurance</h2>
+
+            <ul>
+                <li>Transparent communication</li>
+                <li>Contractual discipline</li>
+                <li>Quality consistency</li>
+                <li>Timely execution</li>
+            </ul>
+
+            <p class="trade-quote">
+                “Structured process. Reliable execution. Trusted outcomes.”
+            </p>
+        </div>
+
+    </div>
+</div>
